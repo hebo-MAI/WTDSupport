@@ -33,7 +33,7 @@ namespace WTDSupport
 
         private string Compile(string input)
         {
-            StringBuilder sb = new StringBuilder(initial);
+            var sb = new StringBuilder();
             var octaveReverse = input.Contains(OctaveReverse);
             var inter = input.Replace(OctaveReverse, string.Empty);
             foreach (char c in inter)
