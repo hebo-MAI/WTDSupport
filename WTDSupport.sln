@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WTDSupport", "WTDSupport\WTDSupport.csproj", "{F18E0182-557F-4FED-B89A-589A683636FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{1462D6F5-3C90-48E8-9490-724FF579829E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F18E0182-557F-4FED-B89A-589A683636FE} = {F18E0182-557F-4FED-B89A-589A683636FE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F18E0182-557F-4FED-B89A-589A683636FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18E0182-557F-4FED-B89A-589A683636FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18E0182-557F-4FED-B89A-589A683636FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18E0182-557F-4FED-B89A-589A683636FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1462D6F5-3C90-48E8-9490-724FF579829E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1462D6F5-3C90-48E8-9490-724FF579829E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1462D6F5-3C90-48E8-9490-724FF579829E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1462D6F5-3C90-48E8-9490-724FF579829E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE438454-DA33-48D3-867C-F34852312033}
+	EndGlobalSection
+EndGlobal
