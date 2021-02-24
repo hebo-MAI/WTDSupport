@@ -31,5 +31,14 @@ namespace UnitTest
             var reader = new MMLReader(input);
             Assert.AreEqual(expected, reader.GetMMLString());
         }
+
+        [TestMethod]
+        public void LfoTest()
+        {
+            var input = "@lfo 0, 0, 1, 0, 1";
+            var expected = "m 0, 0, 1, 0, 1";
+            var reader = new MMLReader(input);
+            Assert.AreEqual(expected, reader.GetMMLString());
+        }
     }
 }
