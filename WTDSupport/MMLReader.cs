@@ -17,7 +17,7 @@ namespace WTDSupport
 
         public MMLReader(string content)
         {
-            this.initial= content;
+            this.initial = content;
         }
 
         public string GetMMLString()
@@ -34,18 +34,24 @@ namespace WTDSupport
         private string Compile(string input)
         {
             var sb = new StringBuilder();
-            var octaveReverse = input.Contains(OctaveReverse);
-            var inter = input.Replace(OctaveReverse, string.Empty);
+            var reverse = input.Contains(Reverse);
+            var inter = input.Replace(Reverse, string.Empty);
             foreach (char c in inter)
             {
                 char d;
                 switch (c)
                 {
                     case '<':
-                        d = octaveReverse ? '>' : '<';
+                        d = reverse ? '>' : '<';
                         break;
                     case '>':
-                        d = octaveReverse ? '<' : '>';
+                        d = reverse ? '<' : '>';
+                        break;
+                    case '(':
+                        d = reverse ? ')' : '(';
+                        break;
+                    case ')':
+                        d = reverse ? '(' : ')';
                         break;
                     default:
                         d = c;
@@ -62,6 +68,6 @@ namespace WTDSupport
         private string intermediate;
         private bool cached;
 
-        private const string OctaveReverse = "#OCTAVE REVERSE";
+        private const string Reverse = "#REVERSE";
     }
 }
