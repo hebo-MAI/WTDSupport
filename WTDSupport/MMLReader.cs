@@ -35,7 +35,8 @@ namespace WTDSupport
         {
             var sb = new StringBuilder();
             var reverse = input.Contains(Reverse);
-            var inter = input.Replace(Reverse, string.Empty);
+            var inter = input.Replace(Reverse, string.Empty)
+                .Replace("@lfo", "m");
             foreach (char c in inter)
             {
                 char d;
