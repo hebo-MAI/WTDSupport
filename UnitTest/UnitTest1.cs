@@ -60,5 +60,24 @@ namespace UnitTest
             var reader = new MMLReader(input);
             Assert.AreEqual(expected, reader.GetMMLString());
         }
+
+        [TestMethod]
+        public void AreaCommentTest1()
+        {
+            var input = "abc/*test*/de";
+            var expected = "abcde";
+            var reader = new MMLReader(input);
+            Assert.AreEqual(expected, reader.GetMMLString());
+        }
+
+        [TestMethod]
+        public void AreaCommentTest2()
+        {
+            var input = @"abc/* comment 1
+comment 2*/de";
+            var expected = "abcde";
+            var reader = new MMLReader(input);
+            Assert.AreEqual(expected, reader.GetMMLString());
+        }
     }
 }

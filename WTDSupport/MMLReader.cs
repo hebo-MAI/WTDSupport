@@ -38,6 +38,7 @@ namespace WTDSupport
             var reverse = input.Contains(Reverse);
             var inter = input.Replace(Reverse, string.Empty)
                 .Replace("@lfo", "m");
+            inter = Regex.Replace(inter, "/\\*[\\s\\S]*\\*/", "");
             inter = Regex.Replace(inter, "//[^\r\n]*(\r\n|[\r\n])?", "$1");
             foreach (char c in inter)
             {
