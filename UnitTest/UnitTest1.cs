@@ -79,5 +79,14 @@ comment 2*/de";
             var reader = new MMLReader(input);
             Assert.AreEqual(expected, reader.GetMMLString());
         }
+
+        [TestMethod]
+        public void AreaCommentTest3()
+        {
+            var input = "a/*a*/b/*b*/c/*c*/d";
+            var expected = "abcd";
+            var reader = new MMLReader(input);
+            Assert.AreEqual(expected, reader.GetMMLString());
+        }
     }
 }
