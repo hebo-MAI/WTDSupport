@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace WTDSupport
 {
@@ -37,6 +38,7 @@ namespace WTDSupport
             var reverse = input.Contains(Reverse);
             var inter = input.Replace(Reverse, string.Empty)
                 .Replace("@lfo", "m");
+            inter = Regex.Replace(inter, "//[^\r\n]*(\r\n|[\r\n])?", "$1");
             foreach (char c in inter)
             {
                 char d;
