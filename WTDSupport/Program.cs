@@ -17,7 +17,6 @@ namespace WTDSupport
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
